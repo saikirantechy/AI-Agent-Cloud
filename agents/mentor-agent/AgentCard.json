@@ -1,0 +1,9 @@
+{
+  "id": "mentor-agent",
+  "name": "Mentor Agent",
+  "description": "Provide startup, hackathon, and learning mentorship guidance for students and founders.",
+  "categories": ["mentorship", "startup", "education"],
+  "entrypoint": "src/main.py",
+  "version": "0.1.0",
+  "icon": "💡"
+}

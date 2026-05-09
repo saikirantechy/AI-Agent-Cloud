@@ -1,0 +1,9 @@
+{
+  "id": "resume-agent",
+  "name": "Resume Agent",
+  "description": "Analyze resumes, extract skills, score ATS fit, and provide improvement guidance.",
+  "categories": ["career", "resume", "analytics"],
+  "entrypoint": "src/main.py",
+  "version": "0.1.0",
+  "icon": "📝"
+}

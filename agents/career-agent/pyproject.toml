@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "career-agent"
+version = "0.1.0"
+description = "Career recommendation agent for AI Agent Cloud"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110.0",
+  "uvicorn[standard]>=0.23.2",
+  "pydantic>=2.9.0"
+]

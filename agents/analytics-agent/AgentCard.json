@@ -1,0 +1,9 @@
+{
+  "id": "analytics-agent",
+  "name": "Analytics Agent",
+  "description": "Generate metrics, agent execution summaries, and usage insights for AI workflows.",
+  "categories": ["analytics", "monitoring", "reporting"],
+  "entrypoint": "src/main.py",
+  "version": "0.1.0",
+  "icon": "📊"
+}

@@ -1,6 +1,7 @@
 fastapi==0.110.0
 uvicorn[standard]==0.23.2
 pydantic==2.9.0
+pydantic-settings==2.5.0
 python-dotenv==1.0.0
 openai==1.1.0
-psycopg2-binary==2.9.8
+# psycopg2-binary==2.9.8  # Commented out for local testing without PostgreSQL

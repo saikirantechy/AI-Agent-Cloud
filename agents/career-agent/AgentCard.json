@@ -1,0 +1,9 @@
+{
+  "id": "career-agent",
+  "name": "Career Agent",
+  "description": "Recommend career paths, internships, and roadmap actions for students and founders.",
+  "categories": ["career", "mentorship", "planning"],
+  "entrypoint": "src/main.py",
+  "version": "0.1.0",
+  "icon": "🚀"
+}

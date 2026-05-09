@@ -1,0 +1,9 @@
+{
+  "id": "notification-agent",
+  "name": "Notification Agent",
+  "description": "Create event notifications, campaign summaries, and alert messages for agent workflows.",
+  "categories": ["notifications", "alerts", "workflow"],
+  "entrypoint": "src/main.py",
+  "version": "0.1.0",
+  "icon": "🔔"
+}
