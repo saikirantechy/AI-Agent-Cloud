@@ -24,3 +24,6 @@ docker-compose.override.yml
 **/docker-compose.override.yml
 **/*.log
 **/.cache
+
+# Nasiko local clone should remain untracked as a local dependency
+nasiko/
