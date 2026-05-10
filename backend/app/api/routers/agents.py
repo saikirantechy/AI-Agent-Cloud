@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.services.analytics import analytics_state
+from ...services.analytics import analytics_state
 
 router = APIRouter()
 

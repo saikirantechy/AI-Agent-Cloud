@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from app.api.routers import health, agents, resume, career, mentor, analytics, logs
-from app.middleware.timing import RequestTimingMiddleware
-from app.core.logging import setup_logging
-from app.core.config import settings
+from .api.routers import health, agents, resume, career, mentor, analytics, logs
+from .middleware.timing import RequestTimingMiddleware
+from .core.logging import setup_logging
+from .core.config import settings
 
 setup_logging()
 
@@ -22,13 +22,13 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(health.router, prefix="", tags=["health"])
-app.include_router(agents.router, prefix="", tags=["agents"])
-app.include_router(resume.router, prefix="", tags=["resume"])
-app.include_router(career.router, prefix="", tags=["career"])
-app.include_router(mentor.router, prefix="", tags=["mentor"])
-app.include_router(analytics.router, prefix="", tags=["analytics"])
-app.include_router(logs.router, prefix="", tags=["logs"])
+app.include_router(health, prefix="", tags=["health"])
+app.include_router(agents, prefix="", tags=["agents"])
+app.include_router(resume, prefix="", tags=["resume"])
+app.include_router(career, prefix="", tags=["career"])
+app.include_router(mentor, prefix="", tags=["mentor"])
+app.include_router(analytics, prefix="", tags=["analytics"])
+app.include_router(logs, prefix="", tags=["logs"])
 
 @app.on_event("startup")
 async def startup_event():
@@ -37,4 +37,4 @@ async def startup_event():
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("backend.app.main:app", host=settings.BACKEND_HOST, port=settings.BACKEND_PORT, reload=True)
+    uvicorn.run("app.main:app", host=settings.BACKEND_HOST, port=settings.BACKEND_PORT, reload=True)

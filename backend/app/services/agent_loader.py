@@ -3,7 +3,7 @@ import importlib.util
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[3]
-AGENT_ROOTS = [ROOT_DIR / "agents", ROOT_DIR / "nexus-agents"]
+AGENT_ROOTS = [ROOT_DIR / "nexus-agents", ROOT_DIR / "agents"]
 
 
 def locate_agent_module(agent_name: str) -> Path:

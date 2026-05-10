@@ -1,7 +1,7 @@
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from app.services.agent_loader import run_agent_function
-from app.services.analytics import track_agent_event
+from ...services.agent_loader import run_agent_function
+from ...services.analytics import track_agent_event
 
 router = APIRouter()
 
