@@ -1,178 +1,209 @@
-# Nasiko Buildathon Bengaluru — SKT Nexus AI Platform
+# AI-Agent-Cloud — Open Source AI Operations Platform
 
-## Overview
-This repo is built as a professional Nasiko-powered hackathon workspace for a campus intelligence / student career platform.
-It demonstrates a modular multi-agent architecture, real deployment workflow, observability, and a polished project structure.
+[![CI](https://img.shields.io/github/actions/workflow/status/saikirantechy/AI-Agent-Cloud/ci.yml?branch=main&label=build&style=for-the-badge)](https://github.com/saikirantechy/AI-Agent-Cloud/actions)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
+[![GitHub Pages](https://img.shields.io/badge/docs-GitHub%20Pages-blueviolet?style=for-the-badge)](https://saikirantechy.github.io/AI-Agent-Cloud/)
 
-## Workspace Layout
+## Project Overview
+AI-Agent-Cloud is a professional open-source AI operations platform and developer-first orchestration system. It is built as a modular, extensible multi-agent infrastructure project for campus automation, startup operations, and developer ecosystems.
+
+This repository includes:
+- `frontend/` — modern Next.js dashboard for orchestration, analytics, and agent management
+- `backend/` — FastAPI orchestration API for agent workflows and developer integrations
+- `nexus-agents/` — modular AI agent packages for resume intelligence, career guidance, mentorship, notifications, and analytics
+- `docs/` — platform documentation, architecture reference, and deployment guidance
+- `docker/` — container composition for local and production-ready deployment
+
+## Why AI-Agent-Cloud
+AI-Agent-Cloud is positioned as:
+- an open-source AI operations platform
+- a multi-agent orchestration system
+- a developer-friendly infrastructure framework
+- a scalable automation platform for campus and startup teams
+
+The platform is designed for open-source contributions, plugin-friendly extensibility, and long-term production readiness.
+
+## Platform Vision
+AI-Agent-Cloud enables teams to deploy a modular AI infrastructure that supports:
+- agent orchestration and workflow automation
+- developer extensibility and plugin modules
+- real-time observability and performance metrics
+- API-first integrations for external systems
+- scalable cloud deployment and enterprise integration
+
+## Core Features
+- Open source multi-agent orchestration architecture
+- Developer platform with API-first design
+- Modular agent system for resume, career, mentor, analytics, notification, and event flows
+- Dashboard with observability, analytics, and status insights
+- Professional UX for enterprise-grade AI operations
+- Docker-ready local and production deployment
+
+## Use Cases
+- Campus automation for student career services
+- Startup operations and mentorship workflows
+- Developer platform for AI-enabled agent ecosystems
+- Real-time orchestration of distributed AI services
+- Observability for agent performance and routing
+
+## Project Layout
 ```txt
-Nasiko-Buildathon/
-├── nasiko-core/              # Nasiko control plane core repo
-├── nexus-agents/             # Custom modular AI agents
-│   ├── career-agent/
-│   ├── resume-agent/
-│   ├── mentor-agent/
-│   ├── analytics-agent/
-│   ├── notification-agent/
-│   └── event-agent/
-├── frontend/                 # Next.js + TypeScript demo dashboard
+AI-Agent-Cloud/
 ├── backend/                  # FastAPI orchestration API
-├── docs/                     # Architecture and setup docs
+├── docs/                     # Platform documentation and GitHub Pages content
 ├── docker/                   # Deployment composition and helper scripts
-├── scripts/                  # Startup scripts and developer tools
-└── README.md
+├── frontend/                 # Next.js dashboard and SaaS-style UI
+├── nexus-agents/             # Modular AI agent packages
+├── .env.example              # Environment configuration template
+├── docker-compose.yml        # Reference deployment compose file
+├── LICENSE                   # Open source license
+├── CONTRIBUTING.md           # Contribution guide
+├── CODE_OF_CONDUCT.md        # Community behavior policy
+├── SECURITY.md               # Security policy
+├── .github/                  # GitHub Actions and issue templates
+└── README.md                 # Project overview and contribution guide
 ```
 
-## Buildathon Goals
-- Deploy a scalable AI agent control plane using Nasiko
-- Build real multi-agent orchestration, not a single chatbot
-- Surface observability, routing, and lifecycle management
-- Provide a judge-friendly story and production-style architecture
-- Ship a complete demo with frontend, backend, deployment, and docs
+## Open Source Platform Direction
+This project is evolving into a long-term professional open-source platform. It is no longer positioned as a single hackathon demo.
 
-## Execution Plan
-### Phase 1 — Core Infrastructure
-1. Clone Nasiko into `nasiko-core`
+### What this means
+- Contributions are welcome and encouraged
+- The codebase is designed for extensibility and modular integration
+- The platform targets production-readiness and developer adoption
+- Documentation, architecture, and deployment guides are central to the project
+
+## Installation
+### Local development
+1. Copy the environment template:
    ```bash
-   git clone https://github.com/Nasiko-Labs/nasiko.git nasiko-core
-   cd nasiko-core
+   cp .env.example .env
    ```
-2. Keep Nasiko core isolated from custom agents and frontend
-
-### Phase 2 — Environment Setup
-1. Copy env template:
+2. Install backend dependencies:
    ```bash
-   cp .nasiko-local.env.example .nasiko-local.env
+   python -m venv .venv
+   .venv\Scripts\activate
+   pip install -r backend/requirements.txt
    ```
-2. Configure strong local values:
-   ```env
-   USER_CREDENTIALS_ENCRYPTION_KEY=skt-nexus-buildathon-2026
-   OPENAI_API_KEY=your-openai-key
-   ENVIRONMENT=development
-   LOG_LEVEL=debug
-   ```
-
-### Phase 3 — Fast, Clean Dependency Setup
-1. Install `uv`
+3. Install frontend dependencies:
    ```bash
-   pip install uv
-   uv venv
-   uv sync
+   cd frontend
+   npm install
    ```
-2. Use a dedicated virtual environment to avoid dependency conflicts
-
-### Phase 4 — Docker Deployment
-1. Prune stale state before startup:
+4. Start the frontend and backend locally:
    ```bash
-   docker system prune -f
+   cd ..
+   docker compose up --build
    ```
-2. Launch Nasiko locally:
+5. Open the dashboard:
+   - `http://localhost:3000`
+
+### Docker deployment
+1. Build and run containers:
    ```bash
-   docker compose -f docker-compose.local.yml --env-file .nasiko-local.env up -d
+   docker compose up --build -d
    ```
-3. Validate the stack with health checks
+2. Validate services:
+   ```bash
+   docker ps
+   ```
+3. Confirm API health:
+   ```bash
+   curl http://localhost:8000/health
+   ```
 
-### Phase 5 — Validate System Health
-- Containers:
-  ```bash
-  docker ps
-  ```
-- Nasiko backend:
-  ```bash
-  curl http://localhost:8000/api/v1/healthcheck
-  ```
-- Nasiko gateway:
-  ```bash
-  curl http://localhost:9100/health
-  ```
-- Dashboard:
-  `http://localhost:9100/app/`
+### GitHub Pages deployment
+This repository includes `docs/` content suitable for GitHub Pages. Configure GitHub Pages to serve from the `docs/` folder to publish a professional project site.
 
-### Phase 6 — Multi-Agent Architecture
-Create each agent as a distinct module with its own business logic and API:
-- `resume-agent` — resume parsing, skill extraction, ATS scoring
-- `career-agent` — roadmap generation, role recommendations, internship matching
-- `mentor-agent` — startup feedback, hackathon guidance, coaching prompts
-- `analytics-agent` — event analytics, student engagement, agent usage metrics
-- `notification-agent` — summary delivery, email/push integration, dashboard updates
-- `event-agent` — campus events, internships, deadlines, hackathon planning
+## Deployment Matrix
+| Deployment | Purpose | Notes |
+|------------|---------|-------|
+| Local `npm` + Python | Developer UI and API testing | Use `npm run dev` and `uvicorn` |
+| Docker Compose | Full-stack reproducible local environment | `docker compose up --build` |
+| GitHub Pages | Documentation and landing site | `docs/` folder as the publishing source |
 
-### Phase 7 — Agent Workflow
-1. User uploads a resume
-2. `resume-agent` extracts skills and scores fit
-3. `career-agent` produces a personalized roadmap
-4. `mentor-agent` offers startup/skill advice
-5. `notification-agent` pushes results back to the dashboard
-6. `analytics-agent` tracks execution and performance
+## Quickstart
+- Clone the repository
+- Copy `.env.example` to `.env`
+- Install backend dependencies
+- Install frontend dependencies
+- Start services locally with Docker or individual dev servers
+- Validate APIs with `curl` or Postman
 
-### Phase 8 — Frontend and UX
-Use a modern stack:
-- `Next.js`
-- `TypeScript`
-- `Tailwind CSS`
-- `ShadCN UI`
+## Roadmap Preview
+- Professional open-source contributor workflow
+- GitHub Pages documentation and landing page
+- Vector search and RAG integration
+- Real-time orchestration and multi-user support
 
-Build a dashboard that includes:
-- AI agent cards
-- execution timeline
-- live status indicators
-- observability metrics
-- agent routing controls
+## Community Links
+- [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)
+- [`SECURITY.md`](SECURITY.md)
+- [GitHub Issues](https://github.com/saikirantechy/AI-Agent-Cloud/issues)
 
-### Phase 9 — Observability
-Use Nasiko’s observability capabilities to demonstrate:
-- agent traces
-- request/response timings
-- failure and retry state
-- execution graphs and routing history
+## API Overview
+The backend exposes the following endpoints:
+- `GET /health` — platform health check
+- `GET /agents` — agent catalog and status
+- `GET /analytics` — usage and performance metrics
+- `GET /logs` — activity logs and execution events
+- `POST /resume/analyze` — resume analysis and ATS insights
+- `POST /career/recommend` — career path recommendations
+- `POST /mentor/advice` — mentorship guidance requests
 
-### Phase 10 — Production README
-Include the following sections:
-- Problem Statement
-- Architecture Diagram
-- Multi-Agent Workflow
-- Tech Stack
-- Setup Instructions
-- Demo Guide
-- Future Scope
-- Team Members
+## Architecture
+AI-Agent-Cloud uses a layered architecture:
+- Next.js frontend for SaaS dashboard and developer interface
+- FastAPI backend for orchestration, routing, and API-first integration
+- Modular agent packages under `nexus-agents/`
+- Docker deployment for reproducible local and cloud infrastructure
 
-## Recommended Pitch
-> We built a scalable multi-agent AI operating system for student ecosystems using Nasiko’s control plane infrastructure. Our platform orchestrates specialized agents for resume intelligence, career guidance, startup mentoring, and campus operations.
+## Documentation
+See `docs/` for:
+- Platform overview
+- Architecture reference
+- Setup guide
+- Roadmap and project direction
+- Contribution workflows
+- Deployment documentation
 
-## Why This Wins
-| Typical Hackathon | SKT Nexus System |
-|-------------------|------------------|
-| Single chatbot | Multi-agent platform |
-| One API call | Agent orchestration |
-| No infra | Production architecture |
-| No monitoring | Full observability |
-| Static UX | AI operations dashboard |
+A GitHub Actions CI workflow is included at `.github/workflows/ci.yml` to validate frontend and backend builds.
 
-## Best Architecture
-```txt
-Frontend (Next.js)
-       ↓
-API Gateway
-       ↓
-Nasiko Control Plane
-       ↓
------------------------------------------
-| Resume Agent | Career Agent          |
-| Mentor Agent | Analytics Agent       |
-| Event Agent  | Notification Agent    |
------------------------------------------
-       ↓
-PostgreSQL + Redis + Vector DB
-```
+## Community & Contribution
+AI-Agent-Cloud is built for open source collaboration.
+- Open source ecosystem support
+- Plugin and agent extension architecture
+- Community contributions and feature requests
+- Developer-friendly documentation
 
-## Next Steps
-1. Create `skt-nexus-agents/` and add modular agent packages
-2. Build a `frontend/` dashboard for agent orchestration
-3. Document the architecture in `docs/`
-4. Ensure demo readiness with one-click local startup and live agent execution
+## Contribution Guidelines
+Please review `CONTRIBUTING.md` for contribution workflow, code standards, and issue guidance. 
 
-## Notes
-- Do not build another standalone chatbot.
-- Do build a platform with agent routing, orchestration, and deployable services.
-- Focus on judges: architecture, uniqueness, and real deployment.
+## Roadmap
+Planned platform evolution includes:
+- plugin marketplace and extensible agent ecosystem
+- API-first developer integrations
+- WebSocket and real-time orchestration support
+- vector database and retrieval augmentation
+- cloud deployment patterns and production infrastructure
+- observability dashboards and telemetry
+- enterprise authentication and multi-user support
+
+## Security Notes
+- Do not store secrets in source control
+- Use environment variables for keys and credentials
+- Follow secure deployment practices for production
+- Report security concerns via GitHub issues or security advisories
+
+## License
+This project is released under the MIT License. See `LICENSE` for details.
+
+## Getting Started
+1. Read `docs/setup.md` for environment and deployment instructions
+2. Explore `docs/architecture.md` for system design details
+3. Run the frontend and backend locally
+4. Submit issues, feature requests, and community contributions through GitHub
+
+## Project Identity
+AI-Agent-Cloud is an open-source multi-agent AI orchestration platform built to support scalable automation, developer workflows, and extensible infrastructure for campus and startup operations.

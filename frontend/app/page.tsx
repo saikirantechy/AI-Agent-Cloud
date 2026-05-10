@@ -111,11 +111,17 @@ export default function HomePage() {
               <a href="#agents" className="text-slate-400 transition-colors hover:text-cyan-300">
                 Agents
               </a>
+              <a href="#analytics" className="text-slate-400 transition-colors hover:text-cyan-300">
+                Analytics
+              </a>
               <a href="#resume" className="text-slate-400 transition-colors hover:text-cyan-300">
                 Resume
               </a>
-              <a href="#analytics" className="text-slate-400 transition-colors hover:text-cyan-300">
-                Analytics
+              <a href="/docs/index.html" className="text-slate-400 transition-colors hover:text-cyan-300">
+                Docs
+              </a>
+              <a href="https://github.com/saikirantechy/AI-Agent-Cloud" target="_blank" rel="noreferrer" className="text-slate-400 transition-colors hover:text-cyan-300">
+                GitHub
               </a>
               <motion.div
                 className={`rounded-full px-3 py-1 text-xs font-semibold uppercase tracking-[0.1em] bg-gradient-to-r ${healthColor}`}
@@ -152,7 +158,7 @@ export default function HomePage() {
           <motion.section initial="hidden" animate="show" variants={container} className="space-y-6">
             <motion.div variants={item}>
               <p className="text-sm uppercase tracking-[0.3em] bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent font-semibold">
-                Enterprise AI Operations
+                Open source AI operations
               </p>
               <h1 className="mt-4 text-5xl sm:text-6xl font-bold text-white leading-tight">
                 Startup AI Agent <br />
@@ -161,7 +167,7 @@ export default function HomePage() {
                 </span>
               </h1>
               <p className="mt-4 max-w-2xl text-lg text-slate-300">
-                Autonomous multi-agent orchestration platform for careers, mentoring, analytics, and intelligent campus operations. Enterprise-grade performance with AI-driven intelligence.
+                Open-source multi-agent orchestration and developer platform for campus automation, startup workflows, and scalable AI infrastructure. Built for extensibility, observability, and production-ready deployments.
               </p>
             </motion.div>
 

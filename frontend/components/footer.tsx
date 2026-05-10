@@ -1,4 +1,4 @@
-import { Github, Zap } from 'lucide-react'
+import { Github, Zap, BookOpen, Puzzle } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -11,48 +11,48 @@ export default function Footer() {
               <Zap className="h-5 w-5 text-cyan-400" />
               <span className="font-bold text-white">Startup AI</span>
             </div>
-            <p className="text-sm text-slate-400">Enterprise-grade multi-agent orchestration platform</p>
+            <p className="text-sm text-slate-400">Open-source AI operations platform for developer-first automation.</p>
           </div>
 
-          {/* Product */}
+          {/* Platform */}
           <div>
-            <h3 className="mb-4 font-semibold text-white">Product</h3>
+            <h3 className="mb-4 font-semibold text-white">Platform</h3>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
-                <a href="#" className="transition-colors hover:text-cyan-300">
-                  Features
+                <a href="/docs/index.html#platform-overview" className="transition-colors hover:text-cyan-300">
+                  Platform Overview
                 </a>
               </li>
               <li>
-                <a href="#" className="transition-colors hover:text-cyan-300">
-                  Pricing
+                <a href="/docs/index.html#developer-experience" className="transition-colors hover:text-cyan-300">
+                  Developer Experience
                 </a>
               </li>
               <li>
-                <a href="#" className="transition-colors hover:text-cyan-300">
-                  Documentation
+                <a href="/docs/index.html#deployment-options" className="transition-colors hover:text-cyan-300">
+                  Deployment Options
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Community */}
           <div>
-            <h3 className="mb-4 font-semibold text-white">Company</h3>
+            <h3 className="mb-4 font-semibold text-white">Community</h3>
             <ul className="space-y-2 text-sm text-slate-400">
               <li>
-                <a href="#" className="transition-colors hover:text-cyan-300">
-                  Nasiko Buildathon
+                <a href="/CONTRIBUTING.md" className="transition-colors hover:text-cyan-300">
+                  Contributing
                 </a>
               </li>
               <li>
-                <a href="#" className="transition-colors hover:text-cyan-300">
-                  GitHub
+                <a href="/docs/index.html#community-contributions" className="transition-colors hover:text-cyan-300">
+                  Community Support
                 </a>
               </li>
               <li>
-                <a href="#" className="transition-colors hover:text-cyan-300">
-                  Contributors
+                <a href="/docs/index.html#open-source-vision" className="transition-colors hover:text-cyan-300">
+                  Open Source Vision
                 </a>
               </li>
             </ul>
@@ -60,11 +60,20 @@ export default function Footer() {
 
           {/* Social */}
           <div>
-            <h3 className="mb-4 font-semibold text-white">Connect</h3>
-            <div className="flex gap-3">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-700 text-slate-400 transition-all hover:border-cyan-400/50 hover:text-cyan-300 hover:shadow-[0_0_10px_rgba(34,211,238,0.2)]">
-                <Github className="h-5 w-5" />
-              </a>
+            <h3 className="mb-4 font-semibold text-white">Resources</h3>
+            <div className="space-y-3 text-sm text-slate-400">
+              <div className="flex items-center gap-2">
+                <BookOpen className="h-4 w-4 text-cyan-300" />
+                <a href="/docs/index.html" className="transition-colors hover:text-cyan-300">
+                  Docs
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Puzzle className="h-4 w-4 text-cyan-300" />
+                <a href="https://github.com/saikirantechy/AI-Agent-Cloud" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-cyan-300">
+                  GitHub
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -72,9 +81,9 @@ export default function Footer() {
         {/* Copyright */}
         <div className="mt-8 border-t border-slate-800/50 pt-8 text-center text-sm text-slate-500">
           <p>
-            Built for Nasiko Buildathon Bengaluru • Powered by <span className="text-cyan-300">OpenAI</span> & <span className="text-cyan-300">LLMs</span>
+            Built as an open-source platform for AI operations and developer automation. Powered by community collaboration and extensible AI architecture.
           </p>
-          <p className="mt-2">© 2026 Startup AI. All rights reserved.</p>
+          <p className="mt-2">© 2026 AI-Agent-Cloud. MIT License.</p>
         </div>
       </div>
     </footer>

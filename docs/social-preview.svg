@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.92"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <text x="600" y="240" fill="#38bdf8" font-family="Inter, system-ui, sans-serif" font-size="56" font-weight="700" text-anchor="middle">AI-Agent-Cloud</text>
+  <text x="600" y="330" fill="#e2e8f0" font-family="Inter, system-ui, sans-serif" font-size="28" text-anchor="middle">Open Source AI Operations Platform</text>
+  <text x="600" y="420" fill="#94a3b8" font-family="Inter, system-ui, sans-serif" font-size="24" text-anchor="middle">Open-source landing page and developer docs</text>
+</svg>

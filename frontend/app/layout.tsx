@@ -3,8 +3,20 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI Agent Cloud",
-  description: "Multi-agent orchestration platform for students and startups.",
+  title: "Startup AI Agent Operations",
+  description: "Open-source multi-agent AI orchestration platform for campus, startup, and developer automation.",
+  metadataBase: new URL("https://saikirantechy.github.io/AI-Agent-Cloud/"),
+  openGraph: {
+    title: "Startup AI Agent Operations",
+    description: "Open-source multi-agent AI orchestration platform for campus and startup automation.",
+    type: "website",
+    url: "https://saikirantechy.github.io/AI-Agent-Cloud/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Startup AI Agent Operations",
+    description: "Open-source multi-agent AI orchestration platform.",
+  },
 };
 
 export default function RootLayout({
