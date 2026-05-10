@@ -1,8 +1,118 @@
+<p align="center">
+
+<img src="https://img.shields.io/github/stars/saikirantechy/AI-Agent-Cloud?style=for-the-badge&label=STARS&color=111827" />
+<img src="https://img.shields.io/github/forks/saikirantechy/AI-Agent-Cloud?style=for-the-badge&label=FORKS&color=10B981" />
+<img src="https://img.shields.io/github/issues/saikirantechy/AI-Agent-Cloud?style=for-the-badge&label=ISSUES&color=F87171" />
+<img src="https://img.shields.io/github/issues-pr/saikirantechy/AI-Agent-Cloud?style=for-the-badge&label=PULL%20REQUESTS&color=A855F7" />
+
+<br/>
+
+<img src="https://img.shields.io/github/license/saikirantechy/AI-Agent-Cloud?style=for-the-badge&label=LICENSE&color=2563EB" />
+<img src="https://img.shields.io/github/actions/workflow/status/saikirantechy/AI-Agent-Cloud/ci.yml?style=for-the-badge&label=BUILD" />
+<img src="https://img.shields.io/badge/OPEN%20SOURCE-COMMUNITY%20DRIVEN-06B6D4?style=for-the-badge" />
+<img src="https://img.shields.io/badge/CONTRIBUTIONS-WELCOME-22C55E?style=for-the-badge" />
+
+</p>
+
 # AI-Agent-Cloud — Open Source AI Operations Platform
 
-[![CI](https://img.shields.io/github/actions/workflow/status/saikirantechy/AI-Agent-Cloud/ci.yml?branch=main&label=build&style=for-the-badge)](https://github.com/saikirantechy/AI-Agent-Cloud/actions)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-[![GitHub Pages](https://img.shields.io/badge/docs-GitHub%20Pages-blueviolet?style=for-the-badge)](https://saikirantechy.github.io/AI-Agent-Cloud/)
+### Building the future of open-source AI orchestration.
+AI-Agent-Cloud is a professional open-source AI operations platform and developer-first orchestration system. It offers a premium multi-agent experience with modular architecture, API-first integration, and community-ready documentation.
+
+<p align="center">
+
+<a href="https://github.com/saikirantechy/AI-Agent-Cloud/stargazers" target="_blank"><strong>⭐ Star AI-Agent-Cloud</strong></a>
+&nbsp;•&nbsp;
+<a href="CONTRIBUTING.md" target="_blank"><strong>🤝 Contribute</strong></a>
+&nbsp;•&nbsp;
+<a href="https://github.com/saikirantechy/AI-Agent-Cloud/issues" target="_blank"><strong>📣 Open an issue</strong></a>
+
+</p>
+
+> Community-driven, extensible, and developer-first AI infrastructure for teams building the next generation of smart automation.
+
+## Social Proof
+
+### Why this project matters
+- AI-Agent-Cloud fills the gap between single-chatbot demos and real multi-agent orchestration.
+- It provides open-source teams with a professional platform for AI workflow automation, observability, and developer adoption.
+- The codebase is designed for long-term community contribution, not just a short-lived demo.
+
+### Who it is for
+- AI engineers building agent orchestration systems
+- Developers integrating AI workflows into products
+- Startups and campus teams automating operations
+- Contributors who want to build an open-source AI infrastructure platform
+
+### Open-source vision
+- A community-first platform for modular AI agents, workflows, and integration plugins.
+- A place for contributors to add new agents, improve observability, and expand deployment patterns.
+- A long-term project that grows with the community rather than a one-off hackathon app.
+
+### Community-first direction
+- Active development with professional docs and GitHub Pages support
+- Clear contributor pathways, issue templates, and community policies
+- Engineering-focused structure with an open invitation to collaborate
+
+## Why Developers Love AI-Agent-Cloud
+- Modular architecture for agent-based workflows
+- API-first platform with FastAPI backend and Next.js frontend
+- AI orchestration that supports extensible agents and workflow routing
+- Open-source ecosystem designed for contributions
+- Developer-friendly setup and Docker-ready deployment
+- Production-ready direction with observability and docs
+- Community-driven mission with transparency and collaboration
+
+## Built For
+- Developers
+- Students
+- Startups
+- AI engineers
+- Open-source contributors
+
+## Project Status
+> 🚀 Active development — community contributions are welcome. This project is continuously evolving with new agent workflows, docs, and platform improvements.
+
+## Contributors
+- **Sai Kiran BK** — Founder & Maintainer
+- Contributors welcome: add your name here and help shape the platform
+- Join the community with issues, feature requests, and pull requests
+
+## How to Contribute
+1. Fork the repository
+2. Create a new branch for your feature or fix
+3. Implement your change and follow the code style
+4. Commit with a clear message
+5. Open a pull request against `main`
+6. Review `CONTRIBUTING.md` for details
+
+## Good First Issues
+- Frontend improvements and dashboard polish
+- Documentation, onboarding, and guides
+- New agent implementations and integrations
+- Observability enhancements
+- Docker and deployment support
+- Testing, validation, and CI improvements
+
+## Support the Project
+- ⭐ Star the repo to show support
+- 🔁 Share the project on LinkedIn / X / developer communities
+- 🐛 Open issues for bugs and feature ideas
+- 💡 Submit pull requests with improvements
+- 🤝 Join the open-source community and shape the roadmap
+
+## Project Roadmap
+| Status | Focus |
+|---|---|
+| Completed | Premium UI, backend APIs, modular agent architecture, docs, GitHub Pages-ready content |
+| In Progress | Community contribution flows, issue templates, professional landing experience |
+| Upcoming | Vector search and RAG integration, real-time orchestration, multi-user support |
+| Future Vision | Agent marketplace, SDKs, enterprise-grade deployment, ecosystem extensions |
+
+## Star History / Future Community
+- Future community features: contributors graph, integration showcase, ecosystem dashboard
+- Designed to attract stars, forks, and active contributors
+- Scales from early adopter demos to open-source platform growth
 
 ## Project Overview
 AI-Agent-Cloud is a professional open-source AI operations platform and developer-first orchestration system. It is built as a modular, extensible multi-agent infrastructure project for campus automation, startup operations, and developer ecosystems.
