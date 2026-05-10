@@ -123,6 +123,7 @@ This repository includes:
 - `nexus-agents/` — modular AI agent packages for resume intelligence, career guidance, mentorship, notifications, and analytics
 - `docs/` — platform documentation, architecture reference, and deployment guidance
 - `docker/` — container composition for local and production-ready deployment
+- `CONTRIBUTORS.md` — contributor recognition and hall of contributors
 
 ## Why AI-Agent-Cloud
 AI-Agent-Cloud is positioned as:
@@ -248,8 +249,15 @@ This repository includes `docs/` content suitable for GitHub Pages. Configure Gi
 
 ## Community Links
 - [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- [`CONTRIBUTORS.md`](CONTRIBUTORS.md)
 - [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md)
 - [`SECURITY.md`](SECURITY.md)
+- [`docs/good-first-issues.md`](docs/good-first-issues.md)
+- [`docs/api-reference.md`](docs/api-reference.md)
+- [`docs/ecosystem.md`](docs/ecosystem.md)
+- [`social-preview.md`](social-preview.md)
+- [`launch-posts.md`](launch-posts.md)
+- [`community-announcement.md`](community-announcement.md)
 - [GitHub Issues](https://github.com/saikirantechy/AI-Agent-Cloud/issues)
 
 ## API Overview

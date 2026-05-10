@@ -1,45 +1,49 @@
 # Architecture Overview
 
-AI-Agent-Cloud is designed as an open-source multi-agent AI orchestration platform with a modular developer-first architecture.
+AI-Agent-Cloud is a professional open-source AI orchestration platform built for developers, contributors, and production-minded teams.
 
-## Platform Layers
-- `frontend/`: Next.js dashboard for platform operations, analytics, documentation navigation, and agent control.
-- `backend/`: FastAPI orchestration API that routes service calls, exposes developer APIs, and integrates modular agents.
-- `nexus-agents/`: discrete agent packages for resume intelligence, career guidance, mentorship, notifications, analytics, and extension points.
-- `docker/`: deployment composition and container orchestration for local and cloud-ready stacks.
-- `docs/`: documentation, architecture reference, GitHub Pages landing page, and community resources.
+## Frontend Layer
+- `frontend/` is a Next.js application providing a SaaS-style dashboard.
+- It includes agent cards, analytics panels, observability insights, and developer tooling.
+- The dashboard is designed for fast onboarding, rich UI feedback, and polished presentation.
 
-## Core Architecture
-The platform uses a layered approach:
-- **User interface** accesses the dashboard and developer tools
-- **API layer** exposes health, agents, analytics, logs, and workflow endpoints
-- **Orchestration layer** manages agent execution, routing, and observability
-- **Agent modules** encapsulate domain-specific intelligence
-- **Deployment layer** packages services into Docker containers for reproducible environments
+## Backend Orchestration Layer
+- `backend/` is a FastAPI platform exposing secure API endpoints.
+- It routes workflow requests, manages agent execution, and serves analytics data.
+- The backend is architected for an API-first developer experience and modular orchestration.
 
-## Modular Agent System
-Each agent is designed as a standalone module that can be extended or replaced:
-- `resume-agent` — resume parsing, skill extraction, and ATS scoring
-- `career-agent` — career path recommendations and role matching
-- `mentor-agent` — startup guidance, soft skills coaching, and roadmap advice
-- `analytics-agent` — metrics aggregation, history, and usage dashboards
-- `notification-agent` — summary delivery and orchestration event notifications
+## Agent System
+- `nexus-agents/` contains modular agent packages with independent logic.
+- Each agent can be added, replaced, or extended without changing core infrastructure.
+- Example agents:
+  - `resume-agent` — resume parsing and skills extraction
+  - `career-agent` — career recommendations and role matching
+  - `mentor-agent` — advice and mentorship workflows
+  - `analytics-agent` — metrics aggregation and history
+  - `notification-agent` — delivery and summary updates
 
-## Developer Ecosystem
-The platform is built for developers and maintainers:
-- plugin-style agent architecture
-- API-first integration surface
-- documentation-driven onboarding
-- production-ready Docker deployment
-- open-source contribution workflow
+## Analytics Layer
+- The platform collects usage data, execution metrics, and observability signals.
+- Analytics informs performance improvements, agent reliability, and feature adoption.
+- This layer supports richer dashboards, better debugging, and developer insights.
 
-## Deployment Model
-A recommended deployment pattern is:
+## Deployment Flow
+The deployment flow is built for reproducibility and cloud readiness:
 ```txt
-Frontend (Next.js) -> Backend (FastAPI) -> Agent modules -> Persistence / Observability
+Frontend (Next.js) -> Backend (FastAPI) -> Agent Modules -> Observability & Docs
 ```
+- `docker/` provides container composition for local and production-like environments.
+- `docs/` provides GitHub Pages landing content and project reference material.
 
-For production, this can extend to cloud-native infrastructure, vector stores, and enterprise integrations.
+## Ecosystem Integration
+AI-Agent-Cloud is intended to work as a foundational ecosystem platform:
+- modular agent infrastructure
+- community-driven extension points
+- plugin-ready architecture for new integrations
+- documentation-first onboarding for contributors
 
-## Open Source Vision
-AI-Agent-Cloud is intended as a community-driven platform for AI orchestration. It should be easy to extend, audit, and deploy by developers, operators, and education teams.
+## Open Source Mission
+- Build a transparent, developer-first AI infrastructure project
+- Make it easy for contributors to extend, audit, and deploy
+- Provide a real community platform that grows beyond a demo
+- Enable teams to create agent-based workflows, observability, and automation

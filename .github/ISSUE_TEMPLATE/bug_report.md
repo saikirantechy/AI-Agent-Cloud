@@ -1,22 +1,29 @@
 ---
 name: Bug report
-about: Create a report to help us improve AI-Agent-Cloud
+about: Report a problem or unexpected behavior in AI-Agent-Cloud
 title: '[BUG] '
 labels: bug
 assignees: ''
 ---
 
-## Describe the bug
-A clear and concise description of what the bug is.
+## Description
+Provide a clear summary of the issue and the expected behavior.
 
-## To Reproduce
-Steps to reproduce the behavior:
+## Steps to reproduce
 1. Go to '...'
-2. Click on '...'
-3. See error
+2. Execute '...'
+3. Observe the issue
 
 ## Expected behavior
-Describe what you expected to happen.
+What did you expect to happen?
+
+## Actual behavior
+What happened instead?
+
+## Environment
+- OS:
+- Browser / Client:
+- Version:
 
 ## Additional context
-Add any other context about the problem here.
+Add screenshots, logs, or references that help reproduce the bug.
