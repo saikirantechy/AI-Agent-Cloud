@@ -1,0 +1,26 @@
+name: Stale Issue Management
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'
+  workflow_dispatch: {}
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Mark stale issues and pull requests
+        uses: actions/stale@v6
+        with:
+          repo-token: 
+            ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: 'This issue has been marked as stale because it has not had recent activity. Please update the issue if you would like to keep it open.'
+          stale-pr-message: 'This pull request has been marked as stale due to inactivity. Please update it if you would like to keep it open.'
+          days-before-stale: 30
+          days-before-close: 7
+          stale-issue-label: 'stale'
+          stale-pr-label: 'stale'
+          only-labels: 'bug,enhancement,help wanted,good first issue,documentation,backend,frontend,agents,observability'
+          exempt-issue-labels: 'pinned'
+          exempt-pr-labels: 'work-in-progress'

@@ -1,0 +1,41 @@
+# GitHub label automation for agent, frontend, backend, and docs changes
+# This file is used by the GitHub labeler workflow to assign labels automatically.
+# Learn more: https://github.com/actions/labeler
+
+# Backend and API work
+backend:
+  - "backend/**"
+  - "backend/**/*"
+  - "**/requirements*.txt"
+  - "**/Pipfile"
+
+frontend:
+  - "frontend/**"
+  - "frontend/**/*"
+  - "**/package.json"
+  - "**/tsconfig*.json"
+
+agents:
+  - "nexus-agents/**"
+  - "**/agents/**"
+
+documentation:
+  - "docs/**"
+  - "**/*.md"
+  - "README.md"
+  - "CONTRIBUTING.md"
+  - "SECURITY.md"
+  - "CODE_OF_CONDUCT.md"
+
+observability:
+  - "**/observability*"
+  - "**/monitoring*"
+  - "**/telemetry*"
+
+bug:
+  - "**/*bug*"
+  - "**/*fix*"
+
+enhancement:
+  - "**/*feature*"
+  - "**/*enhancement*"
